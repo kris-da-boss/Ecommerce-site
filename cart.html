@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+     <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header"> 
+        <figure>
+        <img src="itemImg/Logo-image.png" alt="logo" width="100px" height="100px" class="logoImage">
+        <figcaption class="logoCaption"><a href="Home.html">NC Cusmetics</a></figcaption>
+    </figure>
+        <select name="categories" id="categories" class="categories">
+            <option value="categories" >Categories</option>
+            <a href="Perfumes.html"><option value="Perfumes" id="categories">Perfumes</option></a>
+          <option value="Deodorant" id="categories"><a href="">Deodorant</a></option>
+            <a href="airfreshner.html"><option value="Air-freshner" id="categories">Air freshner</option></a> 
+        </select>
+        <input type="search" placeholder="search products" class="search">
+       <!-- Header options -->    
+        <div class="other-options">
+        <a href="Account.html"><p><i class="fa-solid fa-user"></i>Account</p></a>
+        <a href="cart.html"><p><i class="fa-solid fa-cart-shopping cart-icon"> </i>Cart</p></a>
+        </div>
+        <div class="headerImages2" id="headerImages2"></div>
+    </header>
+    <main class="cartmain">
+        <!-- Display items -->
+        <div class="cart">
+            <div class="cartheader-div">
+            <p class="cartheader">Cart</p>
+            <button class="clearcart" id="clearcart">Clear All</button>
+            </div>
+
+        <div class="cart-header-flex">
+                <p>Products</p>     
+                <p>Quantity</p>  
+                <p>Unit price</p>  
+                <p>Subtotal</p>   
+            </div>
+        <div class="cart-displayitems" id="cart-displayitems">
+        </div>
+        </div>  
+        
+        <!-- Cart Summary -->
+         <div class="cartSummary">
+            <h3>Cart Summary</h2>
+           <div class="subtotalflex"><p>Subtotal:</p> <p class="subtotal" id="subtotal"> </p></div>   
+           <div class="subtotalflex"><p>Delivery Fee:</p> <p class="deliveryfee" id="deliveryfee"> </p></div>
+           <div class="subtotalflex"><p>Total:</p> <p class="total" id="total"> </p></div> 
+           <button class="checkout-button" id="checkout-button">Check out</button>
+           </div>  
+    </main>
+    <footer class="footer">
+        <div class="info">
+            <img src="itemImg/Logo-image.png" alt="logo" width="100px" height="100px" class="logoImage">
+        <section class="aboutUs">
+        <h3>Explore NC Cusmetics</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+       <a href="delivery.html"><p>Delivery</p></a> 
+       <a href="privacypolicy.html"><p>Privacy Policy</p></a> 
+        <a href="TC.html"><p>Terms and conditions</p></a>
+        <a href="termsofservice.html"><p>Terms of Service</p></a>
+    </section>
+    <section class="contactUs">
+        <h3>Contact Us</h3>
+       <p> Call Us: <a href="tel:08134211169">08134211169</a></p>  
+       <p>Contact Email: <a href="mailto:kriswilson00000@gmail.com">kriswilson00000@gamil.com</a></p>
+       <p>Help Email: <a href="mailto:support@wili.com">support@wili.com</a></p>
+    </section>
+    <section class="socialHead">
+       <h3>Socials</h3>
+       <p class="social">
+        <a href="https://facebook.com/kriswilson" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""> <i class="fa-brands fa-tiktok"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a> 
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </p>
+</section>
+</div>
+       <p class="copyRight">&copy;2025 All Rights Reserved</p>
+    </footer>
+    <script type="module" src="JavaScipts/displaycart.js" ></script>
+</body>
+</html>
