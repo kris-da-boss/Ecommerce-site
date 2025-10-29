@@ -40,7 +40,7 @@ function displayCart(){
     `
   }); 
 const cartdisplay=document.getElementById('cart-displayitems')
-cartdisplay.innerHTML=cart.length===0?`<p class="emptyCart">No Items Added Yet</p> <a href="Home.html">Add Items</a>`:cartHTML;
+cartdisplay.innerHTML=cart.length===0?`<p class="emptyCart">No Items Added Yet</p> <a href="index.html">Add Items</a>`:cartHTML;
 console.log(totalsubtotal)
 //Remove Cart
 document.querySelectorAll('.cartRemove').forEach((button, index)=>{
@@ -99,11 +99,7 @@ qunatitysub.forEach((button, index)=>{
     console.log(cart)
   })
 })
-<<<<<<< HEAD
 } 
-=======
-}
->>>>>>> d2f009aa4ef93a4355c5c88ec07c4b227dc3001a
 displayCart()
 
 
