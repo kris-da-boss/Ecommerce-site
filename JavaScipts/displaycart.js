@@ -99,7 +99,11 @@ qunatitysub.forEach((button, index)=>{
     console.log(cart)
   })
 })
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> d2f009aa4ef93a4355c5c88ec07c4b227dc3001a
 displayCart()
 
 

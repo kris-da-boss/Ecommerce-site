@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<link rel="stylesheet" href="styles/style.css">
-<link rel="stylesheet" href="styles/responsive.css">
+    <title>NC Cusmetics</title>
+    <link rel="icon" href="itemImg/Logo-image.png">
+    <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="stylesheet" href="styles/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head> 
 <body>
+    <!-- Header -->
     <header class="header"> 
-        <figure>
+        <figure> 
         <img src="itemImg/Logo-image.png" alt="logo" width="100px" height="100px" class="logoImage">
-<<<<<<< HEAD
-        <figcaption class="logoCaption"><a href="Home.html">NC Cusmetics</a></figcaption>
-=======
         <figcaption class="logoCaption"><a href="index.html">NC Cusmetics</a></figcaption>
->>>>>>> d2f009aa4ef93a4355c5c88ec07c4b227dc3001a
     </figure>
         <select name="categories" id="categories" class="categories">
-            <option value="categories" >Categories</option>
+            <option value="categories">Categories</option>
             <a href="Perfumes.html"><option value="Perfumes" id="categories">Perfumes</option></a>
           <option value="Deodorant" id="categories"><a href="">Deodorant</a></option>
-            <a href="airfreshner.html"><option value="Air-freshner" id="categories">Air freshner</option></a> 
+            <a href="airfreshner.html"><option value="Air-freshner" id="categories">Air freshner</option></a>
         </select>
-        <input type="search" placeholder="search products" class="search" autocomplete="name">
-       <!-- Header options -->
+        <input type="search" placeholder="search products" class="search">
+        <!-- Header options -->
         <div class="other-options">
         <a href="Account.html"><p><i class="fa-solid fa-user"></i>Account</p></a>
         <a href="cart.html"><p><i class="fa-solid fa-cart-shopping cart-icon"> </i>Cart</p></a>
         </div>
         <div class="headerImages2" id="headerImages2"></div>
     </header>
-    <!-- Items info -->
-<main>
-    <div class="iteminfodiv" id="iteminfodiv">
-    </div>
-</main>
-
-  <!-- Footer -->
+    <!-- Advert photos -->
+    <div class="headerImages" id="headerImages"></div>
+    <main class="mainhome">
+        <div class="animation-practice">animation practice</div>
+        <span class="addNotification">Added</span>
+        <i class="fa-solid fa-bars"></i>
+        <!-- //Niche fragrance -->                  
+         <h2>Niche Fragrance</h2>
+        <div class="mainProducts" id="mainProducts"></div>
+        <!-- //Product adverts -->
+        <div class="productsAdvert" id="productAdevert">
+        </div>
+        <!-- //New in -->
+         
+         <h2>New In</h2>
+        <div class="newIn" id="newIn"></div>
+        <!-- Featured -->
+         <h2>Featured</h2>
+         <div class="featured" id="featured" style="scroll-behavior: smooth;">   
+         </div>
+         <!-- Best sellers -->
+          <h2>Best sellers</h2>
+          <h2>Deals</h2>
+          <div class="bestSellers"></div>
+          <!-- Deals -->
+           <div class="deals" id="deals"></div>
+    </main>
+    <!-- Footer -->
     <footer class="footer">
         <div class="info">
             <img src="itemImg/Logo-image.png" alt="logo" width="100px" height="100px" class="logoImage">
@@ -68,10 +88,6 @@
 </div>
        <p class="copyRight">&copy; 2025 All Rights Reserved</p>
     </footer>
-    <script type="module" src="JavaScipts/iteminfo.js"></script>
+    <script type="module" src="JavaScipts/home.js"></script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> d2f009aa4ef93a4355c5c88ec07c4b227dc3001a
