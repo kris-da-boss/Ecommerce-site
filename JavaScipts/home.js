@@ -136,7 +136,7 @@ const addToCartButton=document.querySelectorAll('.addToCart');
   
 addToCartButton.forEach((button, index)=>{
     button.addEventListener('click', ()=>{ 
-      const items=homeItems[index].quantity
+      const items=homeItems[index].quantity;
     addToCart(index, items);
     updateCartQuantity()
 
@@ -147,13 +147,11 @@ addToCartButton.forEach((button, index)=>{
     })
 })
 //Add quantity
-const incremenentQuantity=document.querySelectorAll('.addToCartButton')
+const incremenentQuantity=document.querySelectorAll('.addToCartButton');
 incremenentQuantity.forEach((button, index)=>{
 button.addEventListener('click', ()=>{
- homeItems[index].quantity++
-  homeItemFunction()
-  
-   
+  homeItems[index].quantity++
+  homeItemFunction() 
 })
 })
  //Substract quantity

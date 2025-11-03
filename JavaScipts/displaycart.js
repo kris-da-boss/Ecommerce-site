@@ -41,7 +41,7 @@ function displayCart(){
   }); 
 const cartdisplay=document.getElementById('cart-displayitems')
 cartdisplay.innerHTML=cart.length===0?`<p class="emptyCart">No Items Added Yet</p> <a href="index.html">Add Items</a>`:cartHTML;
-console.log(totalsubtotal)
+console.log(totalsubtotal);
 //Remove Cart
 document.querySelectorAll('.cartRemove').forEach((button, index)=>{
    const buttonindex=cart[index];
@@ -50,12 +50,12 @@ document.querySelectorAll('.cartRemove').forEach((button, index)=>{
        displayCart()
     })
 })
+
 const clearCart=document.getElementById('clearcart')
 clearCart.addEventListener('click', ()=>{
   cart.length=0;
   displayCart()
   localstorage()
-  console.log(cart)
 })
     // Cart Summary
     const subtotaldom= document.getElementById('subtotal');
@@ -89,7 +89,7 @@ qunatitysub.forEach((button, index)=>{
   const quantitysubIndex=cart[index];
   button.addEventListener('click', ()=>{
     if(quantitysubIndex.quantity<=1){
-     alert('Invalid Demand')
+      return
     }else{
       quantitysubIndex.quantity--
     }

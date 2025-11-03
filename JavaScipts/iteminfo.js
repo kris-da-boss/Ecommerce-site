@@ -1,6 +1,5 @@
 import { itemdescription, searchInput } from "./displayiteminfo.js";
 import { addToCart } from "./cart.js";
-
 // Search Products
 const searchHome=document.querySelector('.search');
 searchHome.addEventListener('keydown', (event)=>{
@@ -40,16 +39,13 @@ document.getElementById('iteminfodiv').innerHTML=descriptionHTML;
 
 const addProductsButton=document.querySelectorAll('.addProductInfoToCart');
 
-console.log(addProductsButton);
-const addNotification=document.querySelector('.addNotification');  
-
 addProductsButton.forEach((button)=>{
     button.addEventListener('click', ()=>{
-         addToCart(itemdescription.id);
-         addNotification.style.display='inline-block';
+         addToCart(itemdescription.id, itemdescription.quantity);
+         button.textContent='Added'
       setTimeout(()=>{
-        addNotification.style.display='none';
-      }, 1000);
+        button.textContent='Add to Cart';
+      }, 500);
     })
 })
 
