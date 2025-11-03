@@ -149,8 +149,7 @@ padding: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(82, 4, 4);
 }
-.cartButton
-{                                                                                                                     
+.cartButton{                                                                                                                     
     display: flex;
     
 }
@@ -161,6 +160,7 @@ margin-right: 20px;
 padding: 2px;
 cursor: pointer;
 border: solid 2px;
+width: 80px;
 }
 
 .productButton:hover{

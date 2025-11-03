@@ -1,7 +1,6 @@
 import { addToCart ,cart} from "./cart.js";
 import { homeItems } from "./products.js";
 import { addToDescriptionPage, searchInput} from "./displayiteminfo.js";
- 
 
 const animePractice= document.querySelector('.animation-practice')
 let displayanime=true;
@@ -54,12 +53,14 @@ function display(homeImag){
 
 function homeItemFunction(){
 //nichefragrance
-let nichefragenceHTML=``  ;
+let nichefragenceHTML=``;
 let newInHTML=``;
 let FeaturedHTML=``;
 let bestsellersHTML=``;
 let dealHTML=``;
-homeItems.forEach((item)=>{
+
+homeItems.forEach((item)=>{ 
+  
     if(item.category==='nicheFragrance'){
         nichefragenceHTML+=`    
         <div class='nicheItems'> 
@@ -70,9 +71,9 @@ homeItems.forEach((item)=>{
          </a>
         <div class='cartButton'> 
         <button class='productButton addToCart'>Add to Cart</button> 
-        <button class='Button'>+</button>
-        <p class='incDecNum'>1</p>
-        <button class='Button'>-</button>
+      <button class='Button addToCartButton'>+</button>
+        <p class='incDecNum'>${item.quantity}</p>
+        <button class='Button subtractFromCartButton'>-</button>
         </div>
         </div> 
        
@@ -89,9 +90,9 @@ homeItems.forEach((item)=>{
          </a>
         <div class='cartButton'> 
         <button class='productButton addToCart'>Add to Cart</button> 
-        <button class='Button'>+</button>
-        <p class='incDecNum'>1</p>
-        <button class='Button'>-</button>
+       <button class='Button addToCartButton'>+</button>
+        <p class='incDecNum'>${item.quantity}</p>
+        <button class='Button subtractFromCartButton'>-</button>
         </div>
         </div> 
        
@@ -107,9 +108,9 @@ homeItems.forEach((item)=>{
          </a>
         <div class='cartButton'> 
         <button class='productButton addToCart'>Add to Cart</button> 
-        <button class='Button'>+</button>
-        <p class='incDecNum'>1</p>
-        <button class='Button'>-</button>
+       <button class='Button addToCartButton'>+</button>
+        <p class='incDecNum'>${item.quantity}</p>
+        <button class='Button subtractFromCartButton'>-</button>
         </div>
         </div> 
          `
@@ -132,23 +133,44 @@ function updateCartQuantity(){
 
   // Add Items to cart
 const addToCartButton=document.querySelectorAll('.addToCart');
-const addNotification=document.querySelector('.addNotification');   
+  
 addToCartButton.forEach((button, index)=>{
     button.addEventListener('click', ()=>{ 
-    addToCart(index);
+      const items=homeItems[index].quantity
+    addToCart(index, items);
     updateCartQuantity()
-      addNotification.style.display='inline-block';
+
+       button.textContent='Added'
       setTimeout(()=>{
-        addNotification.style.display='none';
-      }, 1000)
-    
-   
+        button.textContent='Add to Cart'
+      }, 500)
     })
 })
+//Add quantity
+const incremenentQuantity=document.querySelectorAll('.addToCartButton')
+incremenentQuantity.forEach((button, index)=>{
+button.addEventListener('click', ()=>{
+ homeItems[index].quantity++
+  homeItemFunction()
+  
+   
+})
+})
+ //Substract quantity
+ const decrementQuantity=document.querySelectorAll('.subtractFromCartButton');
+ decrementQuantity.forEach((button, index) =>{
+  button.addEventListener('click', ()=>{
+    if(homeItems[index].quantity <=1){
+      return
+    }else{
+      homeItems[index].quantity--
+      homeItemFunction()
+    }
+    
+  })
+ })
 
 //Add to description page
-
-
 const descriptionLink1=document.querySelectorAll('.description1');
 
 descriptionLink1.forEach((link, index)=>{

@@ -164,6 +164,7 @@
    .info{
     flex-direction: column;
    }
+
    .buttonFlex{
    display: flex;
    gap: 20px;
@@ -254,6 +255,7 @@
  
   .info{
     gap: 2rem;
+    flex-direction: row;
   } 
     .newIn, .featured{
     overflow: scroll;
@@ -506,7 +508,7 @@ height: 300px;
 .footer{
     background-color: black;
     color: white;
-    padding-top: 5rem;
+    padding-top: 5rem; 
     padding-left: 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
@@ -516,6 +518,7 @@ height: 300px;
 }
 .info{
     display: flex;
+    flex-direction: row;
     position: relative;
     bottom: 40px;
     gap: 10rem;

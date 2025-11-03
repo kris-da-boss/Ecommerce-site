@@ -15,29 +15,26 @@ export function localstorage(){
   localStorage.setItem('cart', JSON.stringify(cart))
 }
 
-export function addToCart(buttonIndex){
+export function addToCart(buttonIndex, quantity){
 let matchingItem= cart.find((item)=> item.productId === buttonIndex);
- console.log(matchingItem)
- console.log(cart)
+ 
 if(matchingItem){
-   matchingItem.quantity+=1;
+   matchingItem.quantity+=quantity;
 // console.log('Quantity:',matchingItem.quantity)
-
-
 }else{
   cart.push(
     {
         productId:buttonIndex,
-        quantity:1
+        quantity:quantity
     }
   )
- 
 }
+ console.log(cart)
 localstorage()
 }
 
 export function removeCart(removeItem){
-  cart =cart.filter((item)=> item!== removeItem);
+  cart = cart.filter((item)=> item!== removeItem);
   
 localstorage()
 console.log(cart)
